@@ -7,8 +7,7 @@ move :: Integral t => t -> t -> t
 move a b = (a + b) `mod` 100
 
 partOne :: [Int] -> Int
-partOne = length . filter (==0) . scanl addMod 50
-  where addMod a b = (a + b) `mod` 100
+partOne = length . filter (==0) . scanl move 50
 
 partTwo :: [Int] -> Int
 partTwo xs = sum $ zipWith touches (scanl move 50 xs) xs
