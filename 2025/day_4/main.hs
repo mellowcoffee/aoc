@@ -41,8 +41,6 @@ partTwo :: Grid -> Int
 partTwo = sum . unfoldr step
   where step (accessibleRolls -> []) = Nothing
         step m@(accessibleRolls -> xs) = Just (length xs, foldr Map.delete m xs)
-  -- where step m | partOne m == 0 = Nothing
-  --              | otherwise = Just (length $ accessibleRolls m, foldr Map.delete m (accessibleRolls m))
 
 main :: IO ()
 main = do
