@@ -1,8 +1,8 @@
 cabal-version:       3.14
 name:                day3
 version:             0.1.0.0
-build-type:          Simple
 license:             MIT
+build-type:          Simple
 
 executable day3
   main-is:           Main.hs

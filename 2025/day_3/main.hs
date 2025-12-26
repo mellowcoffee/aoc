@@ -1,7 +1,5 @@
 import Data.Char (digitToInt)
 
-sample = "987654321111111\n811111111111119\n234234234234278\n818181911112111"
-
 maxPair :: [Int] -> Int
 maxPair = snd . foldr step (-1, -1)
   where step i (maxSuffix, currentMax)
@@ -27,7 +25,7 @@ partTwo = sum . map maxTwelve . lines
 
 parse :: String -> [[Int]]
 parse str = (fmap . fmap) digitToInt $ lines str
-
+ 
 main :: IO ()
 main = do
   input <- readFile "./input.txt"
